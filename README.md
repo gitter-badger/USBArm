@@ -31,5 +31,3 @@ The commands that you can use are;
 * usbarm.grip_open
 * usbarm.grip_close
 * usbarm.light_on
-
-  [1]:  "PyUSB"
