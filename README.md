@@ -1,4 +1,4 @@
-USB Robotic Arm Control Module for Unix systems
+USB Robotic Arm Control Python Module
 ===============================================
 
 A simple to use Python module for controlling USB robotic arm devices on Unix PCs, including the Raspberry Pi.
