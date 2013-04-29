@@ -1,11 +1,17 @@
 USBArm
 ======
 
-A simple to use Python module for controlling USB robotic arm devices on Windows and Unix PCs, including the Raspberry Pi.
+A simple to use Python module for controlling USB robotic arm devices on Unix PCs, including the Raspberry Pi.
+
+Robotic Arm Compatibility
+-------------------------
+![ArmPicture](http://img211.imageshack.us/img211/7640/a37jnhighres.jpg)
+
+The only model currently compatible is the Velleman KSR10 with USB inteface board. In the UK it sold as a USB only version at Maplin.
 
 How to use
 ----------
-First of all, we need to make sure that PyUSB is installed. You can download PyUSB from [Sourceforge](http://sourceforge.net/projects/pyusb/files/latest/download?source=directory). Once extracted just run `python setup.py install` in the pyusb directory to install PyUSB. If you're using a Unix system (such as the Raspberry Pi), run setup.py as superuser. You'll need to install libusb for it to work. Just use your distriutions package manager such as apt, yum, rpm, etc.
+First of all, we need to make sure that PyUSB is installed. You can download PyUSB from [Sourceforge](http://sourceforge.net/projects/pyusb/files/latest/download?source=directory). Once extracted just run `sudo python setup.py install` in the pyusb directory to install PyUSB. You'll need to install libusb for it to work. Just use your distriutions package manager such as apt, yum, rpm, etc.
 
 We now need to download the module. In unix, use `wget https://raw.github.com/NathanBookham/USBArm/master/usbarm.py` to download the latest version. In Windows, use your favorite browser and naviagate to `wget https://raw.github.com/NathanBookham/USBArm/master/usbarm.py` and use the 'Save page as' feature to download.
 Then create a Python script using your favorite text editor/IDE in the same folder as the script you just downloaded. Then use the following commands to import the module and connect to a robotic arm.
