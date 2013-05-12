@@ -7,7 +7,7 @@ Robotic Arm Compatibility
 -------------------------
 ![ArmPicture](http://img211.imageshack.us/img211/7640/a37jnhighres.jpg)
 
-The only model currently compatible is the Velleman KSR10 with USB inteface board. In the UK it sold as a USB only version at Maplin.
+The only model currently compatible is the Velleman KSR10 with USB inteface board. In the UK it is sold exclusivly at Maplin. If it looks like the arm in the image above, it should work.
 
 How to use
 ----------
