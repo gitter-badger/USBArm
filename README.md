@@ -11,6 +11,15 @@ The only model currently compatible is the Velleman KSR10 with USB inteface boar
 
 How to use
 ----------
+
+### Method 1
+
+If you have a Raspberry Pi that runs Raspbian, just run `wget https://raw.github.com/inversesandwich/USBArm/master/install.py` and then `python install.py` to save time and effort.
+
+### Method 2
+
+Follow this method if you want to do it manually or don't have a Raspberry Pi.
+
 First of all, we need to make sure that PyUSB is installed. You can download PyUSB from [Sourceforge](http://sourceforge.net/projects/pyusb/files/latest/download?source=directory). Once extracted just run `sudo python setup.py install` in the pyusb directory to install PyUSB. You'll need to install libusb for it to work. Just use your distriutions package manager such as apt, yum, rpm, etc.
 
 We now need to download the module. In unix, use `wget https://raw.github.com/inversesandwich/USBArm/master/usbarm.py` to download the latest version.
