@@ -23,7 +23,10 @@ Follow this method if you want to do it manually or don't have a Raspberry Pi.
 First of all, we need to make sure that PyUSB is installed. You can download PyUSB from [Sourceforge](http://sourceforge.net/projects/pyusb/files/latest/download?source=directory). Once extracted just run `sudo python setup.py install` in the pyusb directory to install PyUSB. You'll need to install libusb for it to work. Just use your distriutions package manager such as apt, yum, rpm, etc.
 
 We now need to download the module. In unix, use `wget https://raw.github.com/inversesandwich/USBArm/master/usbarm.py` to download the latest version.
-Then create a Python script using your favorite text editor/IDE in the same folder as the script you just downloaded. Then use the following commands to import the module and connect to a robotic arm.
+
+### Using with Python
+
+Once installed, you can now create a Python script using your favorite text editor/IDE in the same folder as the script you just downloaded. Then use the following commands to import the module and connect to a robotic arm.
     
     import usbarm
     usbarm.connect()
