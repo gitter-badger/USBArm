@@ -43,25 +43,29 @@ def connect():
     Connect to the USB arm.
     '''
     global usb_arm
-    # Attempt to import the USB and Time libraries into Python
+    # Attempt to import the USB and time libraries into Python
+    try:
+        from time import sleep
+    except:
+        raise Exception("Time library not found")
     try:
         import usb.core, usb.util
     except:
-        print "USB library could not be found! Please install PyUSB and try again."
-        exit()
+        raise Exception("USB library not found")
     usb_arm = usb.core.find(idVendor=0x1267, idProduct=0x000)
     # Check if the arm is detected and warn if not
     if usb_arm == None:
-        print "Robotic arm not found! Please check connection and try again."
-        exit()
-    return True
+        raise Exception("Robotic arm not found")
+    else:
+        return True
 
 # Define a procedure to transfer commands via USB to the arm
 def ctrl(duration, command):
     '''
     Send a command to the USB arm.
     '''
-    from time import sleep
+    if usb_arm == None:
+        raise Exception("connect() not run")
     # Start the movement
     usb_arm.ctrl_transfer(0x40,6,0x100,0,command,1000)
     # Stop the movement after waiting a specified duration
@@ -71,3 +75,4 @@ def ctrl(duration, command):
 
 if __name__ == "__main__":
     print "This module cannot be run standalone! Please use 'import usbarm' in a Python script."
+    exit()
