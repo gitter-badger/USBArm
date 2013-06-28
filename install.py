@@ -30,23 +30,23 @@ print "Package lists retrived!"
 
 print ""
 print "Updating packages... (This may take a while)"
-call (["sudo apt-get -y upgrade"])
+call (["sudo apt-get -y upgrade"], shell=True)
 print "Packages updated!"
 
 print ""
 print "Installing dependencies..."
-call (["sudo apt-get -y install wget libusb-1.0-0 python-setuptools"])
-call (["sudo easy_install pyusb"])
+call (["sudo apt-get -y install wget libusb-1.0-0 python-setuptools"], shell=True)
+call (["sudo easy_install pyusb"], shell=True)
 print "Dependencies installed!"
 
 print ""
 print "Downloading USBArm module..."
-call (["wget -O /tmp/usbarm.py.tmp https://raw.github.com/inversesandwich/USBArm/master/usbarm.py"])
+call (["wget -O /tmp/usbarm.py.tmp https://raw.github.com/inversesandwich/USBArm/master/usbarm.py"], shell=True)
 print "Module downloaded!"
 
 print ""
 print "Preparing module..."
-call (["mv /tmp/usbarm.py.tmp ~/usbarm.py"])
+call (["mv /tmp/usbarm.py.tmp ~/usbarm.py"], shell=True)
 print "Preparation complete!"
 
 print ""
