@@ -6,7 +6,7 @@ import urllib2
 
 def check_internet_connection():
     try:
-        response=urllib2.urlopen('http://www.google.com',timeout=10)
+        response=urllib2.urlopen('http://github.com',timeout=15)
         return True
     except urllib2.URLError as err: pass
     return False
