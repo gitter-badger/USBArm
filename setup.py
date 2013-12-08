@@ -6,7 +6,6 @@ setup(name='USBArm',
       version='1.0',
       maintainer='InverseSandwich',
       url='http://github.com/inversesandwich/USBArm',
-      long_description=read('README.md'),
       description = ("A simple to use Python module for controlling USB robotic arm devices on Linux PCs, including the Raspberry Pi."),
       license = "Public Domain",
       package_dir={'usbarm': 'src'},
@@ -15,10 +14,10 @@ setup(name='USBArm',
       classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Topic :: Software Development :: Libraries :: Python Modules",
-        "Intended Audience :: Developers"
+        "Intended Audience :: Developers",
         "License :: Public Domain",
-        "Natural Language :: English"
-        "Programming Language :: Python :: 2.7"
-        "Operating System :: POSIX :: Linux"
+        "Natural Language :: English",
+        "Programming Language :: Python :: 2.7",
+        "Operating System :: POSIX :: Linux",
     	],
      )
