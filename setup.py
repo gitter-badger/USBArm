@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# Start of setup.py
 
 from distutils.core import setup
 
@@ -21,3 +22,4 @@ setup(name='USBArm',
         "Operating System :: POSIX :: Linux",
     	],
      )
+# End of setup.py

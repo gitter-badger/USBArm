@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# USB Robotic Arm Control Module for Python 2.7
+# Start of usbarm.py
 
 '''
 A Python module that allows control of a USB arm with a Unix PC.
@@ -74,3 +74,4 @@ def ctrl(duration, command):
 if __name__ == "__main__":
     raise Exception("Cannot run standalone - use 'import usbarm' to utlise this module")
     exit()
+# End of usbarm.py
