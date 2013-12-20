@@ -1,4 +1,19 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# USBArm is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 # Start of usbarm.py
 
 '''
@@ -7,22 +22,9 @@ PyUSB must be installed for this module to work.
 To initialise a connection to the arm, use the command 'usbarm.connect()'.
 To send instructions to the arm, use the command 'usbarm.ctrl(duration, command)'.
 The duration sets how long the command runs for, and the command tells the arm what to do.
-
-Here are the commands you can use:
-usbarm.rotate_ccw
-usbarm.rotate_cw
-usbarm.shoulder_up
-usbarm.shoulder_down
-usbarm.elbow_up
-usbarm.elbow_down
-usbarm.wrist_up
-usbarm.wrist_down
-usbarm.grip_open
-usbarm.grip_close
-usbarm.light_on
 '''
 
-# Define controls to move arm
+# Define commands to control arm
 rotate_ccw = [0,1,0] # Rotate base counter-clockwise
 rotate_cw = [0,2,0] # Rotate base clockwise
 shoulder_up = [64,0,0] # Shoulder up
@@ -74,4 +76,5 @@ def ctrl(duration, command):
 if __name__ == "__main__":
     raise Exception("Cannot run standalone - use 'import usbarm' to utlise this module")
     exit()
+
 # End of usbarm.py
