@@ -43,7 +43,7 @@ def connect():
     Connect to the USB arm.
     '''
     global usb_arm
-    # Attempt to import the USB and time libraries into Python
+    # Attempt to import the USB, Paralel processing and time libraries into Python
     try:
         from time import sleep
     except:
@@ -52,6 +52,10 @@ def connect():
         import usb.core, usb.util
     except:
         raise Exception("USB library not found")
+    try:
+        import multiprocessing
+    except:
+        raise Exception("Paralel processing library not found")
     usb_arm = usb.core.find(idVendor=0x1267, idProduct=0x000)
     # Check if the arm is detected and warn if not
     if usb_arm == None:
@@ -59,10 +63,20 @@ def connect():
     else:
         return True
 
-# Define a procedure to transfer commands via USB to the arm
+# Define a procedure to create processes to enable paralel commands
 def ctrl(duration, command):
     '''
-    Send a command to the USB arm.
+    Creates processes to control arm
+    '''
+    # Define a process to pass commands to ctrl_worker
+    process = multiprocessing.Process(target=ctrl_worker, args=(duration, command))
+    # Start process just created
+    process.start()
+
+# Define a procedure to transfer commands via USB to the arm
+def ctrl_worker(duration, command):
+    '''
+    Handles command transmission over USB
     '''
     if usb_arm == None:
         raise Exception("Robotic arm not connected")
