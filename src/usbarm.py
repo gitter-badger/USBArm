@@ -71,7 +71,7 @@ def ctrl(duration, command):
     # Define a command queue
     queue = []
     # Define a process to pass commands to ctrl_worker
-    process = multiprocess.Process(target=ctrl_worker, args=(duration, command,))
+    process = multiprocessing.Process(target=ctrl_worker, args=(duration, command,))
     # Add command to the queue
     queue.append(process)
     # Start process using items in the queue
