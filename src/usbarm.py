@@ -68,9 +68,13 @@ def ctrl(duration, command):
     '''
     Creates processes to control arm
     '''
+    # Define a command queue
+    queue = []
     # Define a process to pass commands to ctrl_worker
-    process = multiprocessing.Process(target=ctrl_worker, args=(duration, command))
-    # Start process just created
+    process = multiprocess.Process(target=ctrl_worker, args=(duration, command,))
+    # Add command to the queue
+    queue.append(process)
+    # Start process using items in the queue
     process.start()
 
 # Define a procedure to transfer commands via USB to the arm
