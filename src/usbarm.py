@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
+# Copyright (C) 2013 Nathan Bookham
+#
 # USBArm is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -92,6 +94,11 @@ def ctrl_worker(duration, command):
     return True
 
 if __name__ == "__main__":
+	# Show GNU copyright notice
+	print "USBArm Copyright (C) 2013 Nathan Bookham"
+	print "This program comes with ABSOLUTELY NO WARRANTY."
+	print "This is free software, and you are welcome to redistribute it under certain conditions."
+	
     raise Exception("Cannot run standalone - use 'import usbarm' to utilise this module")
     exit()
 
