@@ -88,7 +88,7 @@ def ctrl_worker(duration, command):
     return True
 
 if __name__ == "__main__":
-    raise Exception("Cannot run standalone - use 'import usbarm' to utlise this module")
+    raise Exception("Cannot run standalone - use 'import usbarm' to utilise this module")
     exit()
 
 # End of usbarm.py
