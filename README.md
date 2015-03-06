@@ -1,6 +1,8 @@
 USB Robotic Arm Control Python Module
 ===============================================
 
+[![Join the chat at https://gitter.im/inversesandwich/USBArm](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/inversesandwich/USBArm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A simple to use Python module for controlling USB robotic arm devices on Linux PCs, including the Raspberry Pi.
 
 Robotic Arm Compatibility
